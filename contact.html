@@ -93,7 +93,7 @@
         </div>
     </nav>
 
-    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/background_pic_01.jpg);">
+    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/background_pic_01.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -127,29 +127,34 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <h3>Get In Touch</h3>
-                    <form action="#">
+                    <form id="contactform" method="post" action="https://formspree.io/foti.romano@gmail.com">
                         <div class="row form-group">
-                            <div class="col-md-6">
-                                <!-- <label for="fname">First Name</label> -->
-                                <input type="text" id="fname" class="form-control" placeholder="Your firstname">
+                            <div class="col-md-8">
+                                <!-- <label for="fname">Name</label> -->
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
                             </div>
-                            <div class="col-md-6">
-                                <!-- <label for="lname">Last Name</label> -->
+                            <!--<div class="col-md-6">
+                                <label for="lname">Last Name</label>
                                 <input type="text" id="lname" class="form-control" placeholder="Your lastname">
-                            </div>
+                            </div> -->
                         </div>
-
+                        <div>
+                            <input type="text" name="_gotcha" style="display:none" />
+                        </div>
+                        <div>
+                            <input type="hidden" name="_next" value="./contact.html" />
+                        </div>                        
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="email">Email</label> -->
-                                <input type="text" id="email" class="form-control" placeholder="Your email address">
+                                <input type="email" id="email" name="_replyto" class="form-control" placeholder="Your email address">
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="subject">Subject</label> -->
-                                <input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+                                <input type="text" id="subject" name="_subject" class="form-control" placeholder="Your subject of this message">
                             </div>
                         </div>
 
@@ -160,9 +165,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <form method="post" action="mailto:foti.romano@gmail.com" >
-                                <input type="submit" value="Send Message" class="btn btn-primary">
-                            </form>
+                            <input type="submit" value="Send" class="btn btn-primary">
                         </div>
 
                     </form>     
